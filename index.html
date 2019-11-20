@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+  
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <header>
+    <nav role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+    
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="images/office.jpg">
+        </div>
+        <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+        <a href="#name"><span class="white-text name">John Doe</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      </div></li>
+      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+      <li><a href="#!">Second Link</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <!-- <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+  </header>
+  
+  <main>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br><br>
+        <h1 class="header center red-text text-lighten-2">Starter Template</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light">Get Started</a>
+        </div>
+        <br><br>
+        
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="section">
+        
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center teal-text text-lighten-2"><i class="material-icons">flash_on</i></h2>
+              <h5 class="center">Speeds up development</h5>
+              
+              <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+            </div>
+          </div>
+          
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center teal-text text-lighten-2"><i class="material-icons">group</i></h2>
+              <h5 class="center">User Experience Focused</h5>
+              
+              <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+            </div>
+          </div>
+          
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center teal-text text-lighten-2"><i class="material-icons">settings</i></h2>
+              <h5 class="center">Easy to work with</h5>
+              
+              <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <br><br>
+    </div>
+    
+    <div class="container">
+      <h2 class="header center red-text text-lighten-2">Some grid intuition</h2>
+      <div class="row">
+        <div class="col s1 gridshow">1</div>
+        <div class="col s1 gridshow">2</div>
+        <div class="col s1 gridshow">3</div>
+        <div class="col s1 gridshow">4</div>
+        <div class="col s1 gridshow">5</div>
+        <div class="col s1 gridshow">6</div>
+        <div class="col s1 gridshow">7</div>
+        <div class="col s1 gridshow">8</div>
+        <div class="col s1 gridshow">9</div>
+        <div class="col s1 gridshow">10</div>
+        <div class="col s1 gridshow">11</div>
+        <div class="col s1 gridshow">12</div>
+      </div>
+      
+      <div class="row">
+        <div class="col s4 gridshow">col s4</div>
+        <div class="col s4 gridshow">col s4</div>
+        <div class="col s4 gridshow">col s4</div>
+      </div>
+      
+      <div class="row">
+        <div class="col s12 gridshow">This div is 12-columns wide on all screen sizes</div>
+      </div>
+      <div class="row">
+        <div class="col s6 gridshow">6-columns (one-half)</div>
+        <div class="col s6 gridshow">6-columns (one-half)</div>
+      </div>
+    </div>
+    
+  </main>
+  
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate fringilla est, quis finibus metus consectetur non. Vivamus malesuada, nulla sed sollicitudin eleifend, neque leo finibus dolor, et lobortis erat neque eget est.</p>
+          
+          
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made with <a class="teal-text text-lighten-5" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <!--  Scripts-->
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+</body>
+</html>

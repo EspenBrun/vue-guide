@@ -1,0 +1,34 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+/* Offset content to make room for sidenav */
+header, main, footer {
+  padding-left: 300px;
+}
+
+/* But not on small screens */
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+/* To show some of the grid layout */
+[class*="gridshow"] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #e0f2f1;
+  border: 1px solid #b2dfdb;
+}
