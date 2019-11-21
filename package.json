@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
     "materialize-css": "^1.0.0",
     "underscore": "^1.9.1",
     "vue": "^2.6.10"
