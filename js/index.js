@@ -3,9 +3,18 @@ const forecast = new Vue({
   data: {
     filename: '',
     cellA1: '',
+    selected: [],
+    checkedNames: [],
   },
 });
 
+forecast.$watch('filename', (newValue) => {
+  console.log(newValue);
+});
+
+forecast.$watch('cellA1', (newValue) => {
+  console.log(newValue);
+});
 
 const app = new Vue({
   el: '#app',

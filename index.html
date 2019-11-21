@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+c2<html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
@@ -66,6 +66,42 @@
         <p><input v-model="filename" placeholder="File name"/></p>
         <p>Enter cell a1 value:</p>
         <p><input v-model="cellA1" placeholder="Value in cell A1"/></p>
+        <br/>
+        <div class="row">
+          <div class="input-field col s6 col-border">
+            <label>Multiple Select Dropdown</label>
+            <br/>
+            <select v-model="selected" multiple>
+              <option value="Amadeus">Amadeus</option>
+              <option value="Rapunzel">Rapunzel</option>
+              <option value="Miss Portnoy">Miss Portnoy</option>
+            </select>
+            <span>Selected: {{ selected }}</span>
+          </div>
+          <div class="input-field col s6 col-border">
+            <label>Multiple Select Boxes</label>
+            <br/>
+            <p>
+              <label>
+                <input type="checkbox" id="amadeus" value="Amadeus" v-model="checkedNames"/>
+                <span>Amadeus</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" id="rapunzel" value="Rapunzel" v-model="checkedNames"/>
+                <span>Rapunzel</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" id="miss-portnoy" value="Miss Portnoy" v-model="checkedNames"/>
+                <span>Miss Portnoy</span>
+              </label>
+            </p>
+            <span>Checked names: {{ checkedNames }}</span>
+          </div>
+        </div>
         <div class="row center">
           <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light">Create excel file</a>
         </div>
@@ -91,6 +127,7 @@
       <div id="app-2">
         <span :title="message">
           Hover your mouse over me for a few seconds to see my dynamically bound title.
+c2
         </span>
       </div>
       <div id="app-3">
@@ -203,5 +240,6 @@
 <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
 <script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script src="js/init.js"></script>
 </body>
 </html>
