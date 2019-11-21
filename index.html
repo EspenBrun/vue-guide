@@ -60,13 +60,27 @@
     </div>
     
     <div class="container">
+      <div id='forecast'>
+        <h2 class="header center red-text text-lighten-2">With just inputs</h2>
+        <p>Enter file name:</p>
+        <p><input v-model="filename" placeholder="File name"/></p>
+        <p>Enter cell a1 value:</p>
+        <p><input v-model="cellA1" placeholder="Value in cell A1"/></p>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light">Create excel file</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <h2 class="header center red-text text-lighten-2">With a form</h2>
       <form action = "http://localhost:5000/create-file" method = "post">
         <p>Enter file name:</p>
         <p><input type = "text" name = "filename" /></p>
         <p>Enter cell a1 value:</p>
         <p><input type = "text" name = "a1" /></p>
         <p><input type = "submit" value = "submit" /></p>
-     </form>
+      </form>
     </div>
     
     <div class="container">

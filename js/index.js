@@ -1,3 +1,12 @@
+const forecast = new Vue({
+  el: '#forecast',
+  data: {
+    filename: '',
+    cellA1: '',
+  },
+});
+
+
 const app = new Vue({
   el: '#app',
   data: {
