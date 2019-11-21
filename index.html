@@ -97,76 +97,124 @@
     </div>
     
     <div class="container">
-      <h2 class="header center red-text text-lighten-2">Some grid intuition</h2>
-      <div class="row">
-        <div class="col s1 gridshow">1</div>
-        <div class="col s1 gridshow">2</div>
-        <div class="col s1 gridshow">3</div>
-        <div class="col s1 gridshow">4</div>
-        <div class="col s1 gridshow">5</div>
-        <div class="col s1 gridshow">6</div>
-        <div class="col s1 gridshow">7</div>
-        <div class="col s1 gridshow">8</div>
-        <div class="col s1 gridshow">9</div>
-        <div class="col s1 gridshow">10</div>
-        <div class="col s1 gridshow">11</div>
-        <div class="col s1 gridshow">12</div>
+      <h2 class="header center red-text text-lighten-2">Vue.js</h2>
+      <div id="app">
+        <p>{{ message }}</p>
       </div>
-      
-      <div class="row">
-        <div class="col s4 gridshow">col s4</div>
-        <div class="col s4 gridshow">col s4</div>
-        <div class="col s4 gridshow">col s4</div>
+      <div id="app-2">
+        <span :title="message">
+          Hover your mouse over me for a few seconds to see my dynamically bound title.
+        </span>
       </div>
-      
-      <div class="row">
-        <div class="col s12 gridshow">This div is 12-columns wide on all screen sizes</div>
+      <div id="app-3">
+        <span v-if="seen">Now you see me</span>
       </div>
-      <div class="row">
-        <div class="col s6 gridshow">6-columns (one-half)</div>
-        <div class="col s6 gridshow">6-columns (one-half)</div>
+      <div id="app-4">
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo.text }}
+          </li>
+        </ol>
       </div>
+      <div id="app-5">
+        <p>{{ message }}</p>
+        <button @click="reverseMessage">Reverse message</button>
+      </div>
+      <div id='app-6'>
+        <p>{{ message }}</p>
+        <input v-model="message">
+        <p>{{ reverseMessage }}</p>
+      </div>
+      <div id='app-7'>
+        <!--
+          Now we provide each todo-item with the todo object
+          it's representing, so that its content can be dynamic.
+          We also need to provide each component with a "key",
+          which will be explained later.
+        -->
+        <ol>
+          <todo-item
+          v-for="grocery in groceries"
+          :todo="grocery"
+          :key="grocery.id">
+        </todo-item>
+      </ol>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h2 class="header center red-text text-lighten-2">Some grid intuition</h2>
+    <div class="row">
+      <div class="col s1 gridshow">1</div>
+      <div class="col s1 gridshow">2</div>
+      <div class="col s1 gridshow">3</div>
+      <div class="col s1 gridshow">4</div>
+      <div class="col s1 gridshow">5</div>
+      <div class="col s1 gridshow">6</div>
+      <div class="col s1 gridshow">7</div>
+      <div class="col s1 gridshow">8</div>
+      <div class="col s1 gridshow">9</div>
+      <div class="col s1 gridshow">10</div>
+      <div class="col s1 gridshow">11</div>
+      <div class="col s1 gridshow">12</div>
     </div>
     
-  </main>
+    <div class="row">
+      <div class="col s4 gridshow">col s4</div>
+      <div class="col s4 gridshow">col s4</div>
+      <div class="col s4 gridshow">col s4</div>
+    </div>
+    
+    <div class="row">
+      <div class="col s12 gridshow">This div is 12-columns wide on all screen sizes</div>
+    </div>
+    <div class="row">
+      <div class="col s6 gridshow">6-columns (one-half)</div>
+      <div class="col s6 gridshow">6-columns (one-half)</div>
+    </div>
+  </div>
   
-  <footer class="page-footer">
+</main>
+
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Company Bio</h5>
+        <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate fringilla est, quis finibus metus consectetur non. Vivamus malesuada, nulla sed sollicitudin eleifend, neque leo finibus dolor, et lobortis erat neque eget est.</p>
+        
+        
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Settings</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate fringilla est, quis finibus metus consectetur non. Vivamus malesuada, nulla sed sollicitudin eleifend, neque leo finibus dolor, et lobortis erat neque eget est.</p>
-          
-          
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
+      Made with <a class="teal-text text-lighten-5" href="http://materializecss.com">Materialize</a>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-        Made with <a class="teal-text text-lighten-5" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
-  
-  <!--  Scripts-->
-  <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  </div>
+</footer>
+
+<!--  Scripts-->
+<script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+<script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
