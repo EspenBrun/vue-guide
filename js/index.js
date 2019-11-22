@@ -98,3 +98,15 @@ const app7 = new Vue({
     ],
   },
 });
+
+Vue.component('button-counter', {
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  template: '<button v-on:click="count++" class="btn waves-effect waves">You clicked me {{ count }} times.</button>',
+});
+
+const demoComponent = new Vue({ el: '#demo-component' });
+const demoComponent2 = new Vue({ el: '#demo-component2' });
