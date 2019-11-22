@@ -115,7 +115,7 @@ c2<html lang="en">
         <p><input type = "text" name = "filename" /></p>
         <p>Enter cell a1 value:</p>
         <p><input type = "text" name = "a1" /></p>
-        <p><input type = "submit" value = "submit" /></p>
+        <p><input type = "submit" value = "submit" class="btn waves-effect waves-light" /></p>
       </form>
     </div>
     
@@ -127,7 +127,6 @@ c2<html lang="en">
       <div id="app-2">
         <span :title="message">
           Hover your mouse over me for a few seconds to see my dynamically bound title.
-c2
         </span>
       </div>
       <div id="app-3">
@@ -142,7 +141,7 @@ c2
       </div>
       <div id="app-5">
         <p>{{ message }}</p>
-        <button @click="reverseMessage">Reverse message</button>
+        <a @click="reverseMessage" class="btn waves-effect waves-light">Reverse message</a>
       </div>
       <div id='app-6'>
         <p>{{ message }}</p>
