@@ -189,6 +189,18 @@ c2<html lang="en">
         </div>
       </div>
     </div>
+    <div class="row">
+      <h3 class="header center red-text text-lighten-2">Blog posts</h3>
+      <div class="col s12">
+        <div id='blog-post'>
+          <blog-post
+            v-for='post in posts'
+            v-bind:key='post.id'
+            v-bind:title='post.title'
+          ></blog-post>
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="container">

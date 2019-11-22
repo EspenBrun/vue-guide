@@ -110,3 +110,20 @@ Vue.component('button-counter', {
 
 const demoComponent = new Vue({ el: '#demo-component' });
 const demoComponent2 = new Vue({ el: '#demo-component2' });
+
+Vue.component('blog-post', {
+  props: ['title'],
+  template: '<h6><a>{{ title }}</a></h6>',
+});
+
+// eslint-disable-next-line no-new
+new Vue({
+  el: '#blog-post',
+  data: {
+    posts: [
+      { id: 1, title: 'Ruminations on nuclear fission' },
+      { id: 2, title: 'Geopolitical implications of nuclear winter' },
+      { id: 3, title: 'How I stopped worrying and love the bomb' },
+    ],
+  },
+});
